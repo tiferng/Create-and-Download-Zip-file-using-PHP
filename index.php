@@ -90,6 +90,11 @@ if(isset($_POST['download'])){
 	   unlink($destination);
    
 	 }
+	if(!file_exists($destination)) {
+		 echo "<h3 class='alert alert-warning'>";
+		 echo "<strong>" . $destination ."</strong> is Not Exist";
+		 echo "<h3>"; 
+	  }
   }
 ?>
 
